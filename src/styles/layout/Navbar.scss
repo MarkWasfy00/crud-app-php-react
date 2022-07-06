@@ -1,0 +1,23 @@
+@use '../abstracts/mixins.scss' as * ;
+
+
+.nav{
+    &__holder{
+        @include flex(column,center);
+        gap: 1rem;
+        padding: 2rem;
+        border-bottom: 2px solid black;
+
+        @include media(sm){
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+    }
+
+
+    &__buttons{
+        @include flex(false,center);
+        gap: 2rem;
+    }
+}

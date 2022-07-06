@@ -1,13 +1,16 @@
-import { useState } from 'react'
+import { Routes, Route } from "react-router-dom";
+import AddProduct from "./pages/AddProduct";
 
+import Home from './pages/Home';
 
-function App() {
- 
-
+const App = () => {
   return (
-    <div >
-      Hello world
-    </div>
+    <>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/AddProduct" element={<AddProduct />} />
+        </Routes>
+    </>
   )
 }
 

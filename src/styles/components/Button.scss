@@ -1,0 +1,19 @@
+
+
+
+.btn-filled {
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: transparent;
+    transition: 500ms;
+
+    &:hover{
+        box-shadow: none;
+        cursor: pointer;
+    }
+}
