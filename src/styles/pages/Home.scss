@@ -1,0 +1,19 @@
+@use '../abstracts/mixins.scss' as *;
+
+
+
+.home{
+
+
+    &__card-holder{
+        @include flex(false,center,center);
+        flex-wrap: wrap;
+        column-gap: 2rem;
+        row-gap: 4rem;
+        
+        @include media(xlg){
+            justify-content: flex-start;
+        }
+    }
+
+}

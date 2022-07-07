@@ -1,0 +1,17 @@
+
+
+
+.card{
+    border: 1px solid black;
+    padding: 1rem;
+    
+    
+    &__input{
+        accent-color: black;
+    }
+
+    &__info{
+        text-align: center;
+        padding: 4rem 7rem;
+    }
+}
