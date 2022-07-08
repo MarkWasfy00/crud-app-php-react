@@ -5,14 +5,15 @@ import { selectItems, unselectItems } from "../redux/ProductManger/ProductManage
 
 
 type CardProps = {
-  sku:string,
-  name:string,
-  price:number,
-  property:string
+  sku:string;
+  name:string;
+  price:number;
+  attribute:string;
+  id?:string;
 }
 
 
-const Card = ({sku,name,price,property}:CardProps) => {
+const Card = ({sku,name,price,attribute}:CardProps) => {
   const dispatch = useAppDispatch();
 
 
@@ -31,7 +32,7 @@ const Card = ({sku,name,price,property}:CardProps) => {
         <div className="card__info__sku">{sku}</div>
         <div className="card__info__name">{name}</div>
         <div className="card__info__price">{price}$</div>
-        <div className="card__info__property">{property}</div>
+        <div className="card__info__property">{attribute}</div>
       </div>
     </article>
   )

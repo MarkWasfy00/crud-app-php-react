@@ -18,7 +18,7 @@ function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await axios("http://localhost/php/index.php");
+      const data = await axios("http://localhost/php/ProductList.php");
       const productsArray = await data.data;
       dispatch(importItems({products:productsArray}));
     }
@@ -34,7 +34,7 @@ function Home() {
       <div className="home__card-holder container">
         {
           products.map(product => {
-            return <Card key={product.id} sku={product.id} name={product.name} price={product.price} property={product.size} />
+            return <Card key={product.id} sku={product.sku} name={product.name} price={product.price} attribute={product.attribute} />
           })
         }
       </div>

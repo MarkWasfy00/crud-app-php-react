@@ -1,10 +1,22 @@
+import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useAppSelector } from '../redux/Hooks/Hooks';
 
 
 const Navbar = () => {
+  const selectedProducts = useAppSelector((state) => state.productmanager.selectedProducts);
 
-  const deleteBtn = () => {
-    console.log('test')
+  
+  const deleteBtn = async () => {
+    if(selectedProducts.length >= 1){
+      const sendData = await axios.post("http://localhost/php/ProductList.php",JSON.stringify({
+        selectedProducts,
+      }))
+      const income = await sendData.data;
+      if(income.status == 200){
+        window.location.reload();
+      }
+    }
   }
 
   return (

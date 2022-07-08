@@ -2,15 +2,17 @@ import { createSlice } from '@reduxjs/toolkit'
 
 
 type ItemsProps = {
-    id:string
-    name:string
-    price:number,
-    size:string
+    id:string;
+    name:string;
+    price:number;
+    size:string;
+    sku:string;
+    attribute:string;
 }
 
 type initialStateProps = {
     products:ItemsProps[];
-    selectedProducts:string[]
+    selectedProducts:string[];
 }
 
 const initialState:initialStateProps = {
