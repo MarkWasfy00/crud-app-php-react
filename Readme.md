@@ -1,1 +1,5 @@
-# CRUD APPLICATION
+# CRUD APPLICATION 🛠
+## php - mysql - react - vite
+### Libraries used in this project are (Sass-ReactRouter-Formik-Yup-Axios-ReduxToolkit-typescript)
+### MADE BY MARK WASFY WITH ❤️❤️ To ScandiWeb
+### link to website live : http://mark-wasfy-junior-web-dev.infinityfreeapp.com/
