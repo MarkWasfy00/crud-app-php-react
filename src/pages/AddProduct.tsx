@@ -48,7 +48,7 @@ const AddProduct = () => {
       }),
     }),
     onSubmit: async () => {
-      const sendData = await axios.post("http://localhost/php/ProductAdd.php",JSON.stringify({
+      const sendData = await axios.post("server/endpoints/ProductAdd.php",JSON.stringify({
         sku:formik.values.sku,
         name:formik.values.name,
         price:formik.values.price,
@@ -99,7 +99,7 @@ const AddProduct = () => {
           </div>
           <div className="product__typeswitcher">
             <label>Type Switcher</label>
-            <select name="typeSwitcher" id="" value={formik.values.typeSwitcher} onChange={formik.handleChange}  >
+            <select name="typeSwitcher" id="productType" value={formik.values.typeSwitcher} onChange={formik.handleChange}  >
               <option value="dvd">DVD</option>
               <option value="book">Book</option>
               <option value="furniture">Furniture</option>
@@ -111,7 +111,7 @@ const AddProduct = () => {
                 <div className="dvd__input__size">
                   <div className="value">
                     <label>Size(MB)</label>
-                    <input type="number" name="size" id="#size" value={formik.values.size} onChange={formik.handleChange} onBlur={formik.handleBlur}  />
+                    <input type="number" name="size" id="size" value={formik.values.size} onChange={formik.handleChange} onBlur={formik.handleBlur}  />
                   </div>
                   <div className="errors link-sm">{formik.touched.size && formik.errors.size}</div>
                 </div>

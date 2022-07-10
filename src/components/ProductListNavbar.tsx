@@ -9,7 +9,7 @@ const ProductListNavbar = () => {
   
   const deleteBtn = async () => {
     if(selectedProducts.length >= 1){
-      const sendData = await axios.post("http://localhost/php/ProductList.php",JSON.stringify({
+      const sendData = await axios.post("/server/endpoints//ProductList.php",JSON.stringify({
         selectedProducts,
       }))
       const income = await sendData.data;
