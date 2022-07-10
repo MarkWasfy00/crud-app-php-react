@@ -1,0 +1,83 @@
+@use '../abstracts/mixins.scss' as *;
+
+
+.product{
+    @include flex(column);
+    gap:5rem;
+
+
+    &__input{
+        @include flex(column);
+        gap:1rem;
+        &__sku,
+        &__name,
+        &__price{
+            @include flex(column);
+            .value{
+                @include flex(column);
+                gap: 1rem;
+                @include media(sm){
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 30rem;
+                }
+            }
+            .errors{
+                margin: 5px;
+                color: red;
+            }
+        }
+    }
+
+    &__typeswitcher{
+        @include flex(column);
+        gap: 1rem;
+
+        @include media(sm){
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 25rem;
+        }
+    }
+
+    &__attribute-holder{
+
+        .dvd,
+        .furniture,
+        .book{
+            display: none;
+            &__input{
+                
+                &__size,
+                &__height,
+                &__width,
+                &__length,
+                &__weight{
+                    .value{
+                        @include flex(column);
+                        gap: 1rem;
+
+                        @include media(sm){
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: 35rem;
+                        }
+                    }
+
+                    .errors{
+                        margin: 5px;
+                        color: red;
+                    }
+                }
+
+                
+            }
+            &--active{
+                display: block;
+            }
+        }
+    }
+}

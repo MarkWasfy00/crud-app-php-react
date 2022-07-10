@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAppSelector } from '../redux/Hooks/Hooks';
 
 
-const Navbar = () => {
+const ProductListNavbar = () => {
   const selectedProducts = useAppSelector((state) => state.productmanager.selectedProducts);
 
   
@@ -34,4 +34,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default ProductListNavbar

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 
 import Card from '../components/Card';
-import Navbar from '../components/Navbar';
+import ProductListNavbar from '../components/ProductListNavbar';
 
 
 import { useDispatch } from 'react-redux';
@@ -30,7 +30,7 @@ function Home() {
 
   return (
     <main className="home">
-      <Navbar />
+      <ProductListNavbar />
       <div className="home__card-holder container">
         {
           products.map(product => {
