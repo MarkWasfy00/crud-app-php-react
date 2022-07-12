@@ -5,10 +5,10 @@
 
 
     class DBConnection {
-        private $host = 'sql204.epizy.com';
-        private $username = 'epiz_32132170';
-        private  $password = 'A5I1LVTJiMej';
-        private $dbname = 'epiz_32132170_DB';
+        private $host = '**';
+        private $username = '**';
+        private  $password = '**';
+        private $dbname = '**';
         protected $connection;
 
 
