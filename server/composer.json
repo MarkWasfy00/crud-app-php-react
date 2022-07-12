@@ -1,0 +1,15 @@
+{
+    "name": "mizzo/server",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mark Wasfy",
+            "email": "76422492+MarkWasfy00@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}

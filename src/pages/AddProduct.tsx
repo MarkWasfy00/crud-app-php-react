@@ -19,7 +19,7 @@ const AddProduct = () => {
     },
     validationSchema: Yup.object({
       sku: Yup.string().max(25,"Max length is 25").required(),
-      name: Yup.string().max(255,"Max length is 255").required(),
+      name: Yup.string().max(25,"Max length is 25").required(),
       price: Yup.number().required(),
       size: Yup.number().when('typeSwitcher',{
         is: (val:string) => val === "dvd",
@@ -48,7 +48,7 @@ const AddProduct = () => {
       }),
     }),
     onSubmit: async () => {
-      const sendData = await axios.post("server/endpoints/ProductAdd.php",JSON.stringify({
+      const sendData = await axios.post("/server/src/Controllers/ProductAdd.php",JSON.stringify({
         sku:formik.values.sku,
         name:formik.values.name,
         price:formik.values.price,

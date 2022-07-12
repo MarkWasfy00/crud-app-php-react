@@ -18,12 +18,11 @@ function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await axios("/server/endpoints/ProductList.php");
+      const data = await axios("/server/src/Controllers/ProductList.php");
       const productsArray = await data.data;
       dispatch(importItems({products:productsArray}));
     }
     fetchData();
-    
   },[])
 
 
